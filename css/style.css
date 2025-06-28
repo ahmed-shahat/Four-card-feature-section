@@ -1,0 +1,125 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap");
+:root {
+  --font-family: "Poppins", sans-serif;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: var(--font-family);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+header {
+  margin-bottom: 40px;
+  p {
+    font-weight: 200;
+    max-width: 550px;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  span:first-child {
+    font-weight: 200;
+  }
+  span:last-child {
+    font-weight: 600;
+  }
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border-top: 3px solid;
+  padding: 20px;
+  max-width: 300px;
+  height: 150px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--white);
+  &:is(.card--cyan) {
+    border-color: var(--cyan);
+  }
+  &:is(.card--red) {
+    border-color: var(--red);
+  }
+  &:is(.card--orange) {
+    border-color: var(--orange);
+  }
+  &:is(.card--blue) {
+    border-color: var(--blue);
+  }
+  .card__icon {
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+    margin-top: auto;
+  }
+  .card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .card__description {
+    color: var(--grey-500);
+    line-height: 1.2;
+    font-weight: 200;
+    font-size: 15px;
+  }
+}
+.card__divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+  .card {
+    padding: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding: 40px;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
